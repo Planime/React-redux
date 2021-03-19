@@ -13,7 +13,7 @@ function App() {
     const [isAuth, setAuth] = useState(false);
 
     function isAuthOnChange(e) {
-        console.log(e)
+        console.log(e);
         setAuth(!isAuth)
     };
 
@@ -51,11 +51,11 @@ function App() {
                 </Route>
 
                 <Route path="/pagethree">
-                    <PageThree/>
+                    <PageThree isAuth={isAuth}/>
                 </Route>
 
                 <Route path="/pagefour">
-                    <PageFour isAuth={isAuth}/>
+                    <PageFour isAuth={isAuth} text='hello text from props'/>
                 </Route>
 
             </Switch>

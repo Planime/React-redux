@@ -1,8 +1,16 @@
+import {Redirect} from "react-router-dom";
+
 function withLoginCheck(WrapperComponent) {
-    const NewComponent = () => {
+    const NewComponent = (props) => {
+
+            if (!props.isAuth){
+
+               return <Redirect to="/"/>
+            }
 
 
-        return <WrapperComponent />
+
+        return <WrapperComponent  {...props}/>
     };
 
     return NewComponent

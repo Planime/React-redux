@@ -1,7 +1,7 @@
 import {useHistory} from "react-router-dom";
 import withLoginCheck from "../HOC/withLoginCheck";
 
-function PageFour() {
+function PageFour(props) {
     const history = useHistory();
 
     const onClick = () => {
@@ -9,17 +9,15 @@ function PageFour() {
     };
 
 
-
-    console.log(history)
     return (
         <>
             <button
                 onClick={onClick}
             >History</button>
-            <div>Page 4</div>
+            <div>Page 4 {props.text}</div>
         </>
     )
 }
 
 
-export default PageFour
+export default withLoginCheck(PageFour)
