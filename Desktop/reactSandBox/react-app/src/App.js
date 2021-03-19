@@ -55,7 +55,7 @@ function App() {
                 </Route>
 
                 <Route path="/pagefour">
-                    <PageFour/>
+                    <PageFour isAuth={isAuth}/>
                 </Route>
 
             </Switch>
